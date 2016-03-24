@@ -1,0 +1,15 @@
+<div class="voteList">
+    <div class="voteList-header">
+        <h1>Votes</h1>
+    </div>
+    
+    <div data-ng-repeat="entity in vm.entities" class="voteList-item">
+        <div class="voteList-name">
+            {{ entity.name }}
+        </div>
+        <div class="voteList-actions">
+            <span data-ng-click="vm.edit({ entity: this.entity })">edit</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span data-ng-click="vm.remove({ entity: this.entity })">remove</span>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+</div>
